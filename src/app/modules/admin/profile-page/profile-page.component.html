@@ -1,0 +1,203 @@
+<div class="flex flex-col flex-auto min-w-0 bg-gray-100">
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+        <!-- CONTENT GOES HERE -->
+        <div
+            class="h-400 min-h-400 max-h-400 border-2 border-dashed border-gray-200 rounded-2xl"
+        >
+            <div class="w-full my-2">
+                <p class="flex items-center gap-x-2">
+                    <mat-icon
+                        svgIcon="mat_outline:error_outline"
+                        class="icon-size-5"
+                    ></mat-icon>
+                    <span class="text-gray-500 text-2xl">
+                        {{
+                            "profile_page.Profile_Information"
+                                | transloco
+                                | titlecase
+                        }}</span
+                    >
+                </p>
+            </div>
+
+            <!-- form  -->
+            <div class="w-full border-2 border-red-700 my-2">
+                <form
+                    [formGroup]="profileForm"
+                    class="w-full flex flex-col md:flex-row"
+                >
+                    <!-- border-2 border-dashed border-green-700 -->
+                    <div class="w-full md:w-1/2 grid sm:grid-cols-2 gap-y-4">
+                        <p class="flex items-center gap-x-2 my-4 sm:col-span-2">
+                            <span class="text-black font-bold text-3xl">
+                                {{
+                                    "profile_page.information_hint-title"
+                                        | transloco
+                                        | titlecase
+                                }}</span
+                            >
+                        </p>
+                        <!-- first name  -->
+                        <div class="sm:col-span-2">
+                            <mat-form-field class="w-full">
+                                <mat-label>{{
+                                    "profile_page.first_name" | transloco
+                                }}</mat-label>
+                                <input
+                                    [formControlName]="'first_name'"
+                                    matInput
+                                    [placeholder]="
+                                        'profile_page.first_name' | transloco
+                                    "
+                                />
+                                <mat-error>{{
+                                    "profile_page.required_field" | transloco
+                                }}</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <!-- last name  -->
+                        <div class="sm:col-span-2">
+                            <mat-form-field class="w-full">
+                                <mat-label>{{
+                                    "profile_page.last_name" | transloco
+                                }}</mat-label>
+                                <input
+                                    [formControlName]="'last_name'"
+                                    matInput
+                                    [placeholder]="
+                                        'profile_page.last_name' | transloco
+                                    "
+                                />
+                                <mat-error>{{
+                                    "profile_page.required_field" | transloco
+                                }}</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <!-- gender with brithday -->
+                        <div class="sm:col-span-2 grid sm:grid-cols-2 gap-x-4">
+                            <div class="sm:col-span-1">
+                                <mat-form-field class="w-full">
+                                    <mat-label>{{
+                                        "profile_page.gender" | transloco
+                                    }}</mat-label>
+                                    <mat-select
+                                        [formControlName]="'Gender'"
+                                        [placeholder]="
+                                            'profile_page.gender' | transloco
+                                        "
+                                    >
+                                        <mat-option
+                                            *ngFor="let type of gender"
+                                            [value]="type.value"
+                                        >
+                                            <span class="ml-3">{{
+                                                type.label
+                                                    | transloco
+                                                    | titlecase
+                                            }}</span>
+                                        </mat-option>
+                                    </mat-select>
+                                    <mat-error>{{
+                                        "profile_page.required_field"
+                                            | transloco
+                                    }}</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="sm:col-span-1">
+                                <mat-form-field class="w-full">
+                                    <mat-label>{{
+                                        "profile_page.brithday" | transloco
+                                    }}</mat-label>
+                                    <input
+                                        matInput
+                                        [matDatepicker]="picker"
+                                        [formControlName]="'dop'"
+                                    />
+
+                                    <mat-datepicker-toggle
+                                        matIconSuffix
+                                        [for]="picker"
+                                    ></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                    <mat-error>{{
+                                        "profile_page.required_field"
+                                            | transloco
+                                    }}</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <mat-form-field class="w-full">
+                                <mat-label>{{
+                                    "profile_page.address" | transloco
+                                }}</mat-label>
+                                <input
+                                    [formControlName]="'Address'"
+                                    matInput
+                                    [placeholder]="
+                                        'profile_page.address' | transloco
+                                    "
+                                />
+                                <mat-error>{{
+                                    "profile_page.required_field" | transloco
+                                }}</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <mat-form-field class="w-full">
+                                <mat-label>{{
+                                    "profile_page.email_address" | transloco
+                                }}</mat-label>
+                                <input
+                                    [formControlName]="'Email_address'"
+                                    matInput
+                                    [placeholder]="
+                                        'profile_page.email_address' | transloco
+                                    "
+                                />
+                                <mat-error>{{
+                                    "profile_page.required_field" | transloco
+                                }}</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 "
+                    >
+                        <div class="w-full">
+                            <div
+                                class="w-full flex flex-col justify-center items-center"
+                            >
+                                <p class="my-4 text-gray-500 text-xl">
+                                    {{
+                                        "profile_page.photo_profile" | transloco | titlecase
+                                    }}
+                                </p>
+                                <div class="relative">
+                                    <img
+                                    class="w-40 h-40 rounded-full ring-4 ring-bg-card"
+                                    src="assets/images/avatars/male-04.jpg"
+                                    alt="User avatar"
+                                />
+                                <input type="file" hidden>
+                                <button type="button" class="rounded-lg absolute bottom-0 right-0 bg-white" mat-icon-button> <mat-icon
+                                    svgIcon="mat_outline:edit"
+                                    class="icon-size-5"
+                                ></mat-icon></button>
+                               
+                                </div>
+                              
+                                <p class="my-4 text-gray-500 text-xl">
+                                    {{
+                                        "@username"
+                                    }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
-import { StudentsComponent } from './students.component';
+
+import { ProfilePageComponent } from './profile-page.component';
 
 export default [
     {
         path     : '',
-        component: StudentsComponent,
+        component: ProfilePageComponent,
     },
 ] as Routes;
