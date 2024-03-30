@@ -1,5 +1,22 @@
 {
-    "welcome-back": "Welcome back",
-    "Project": "Project",
-    "Analytics": "Analytics"
+    "page_login":{
+        "login_title":"Login",
+        "login_subtitle":"Enter Your Email to access your account",
+        "login_email":"Email",
+        "Email_required":"Email address is required",
+        "invalid_email_err_msg":"Please enter a valid email address",
+        "Or_with":"Or",
+        "Email_label":"Email",
+        "login_password":"Password",
+        "Password_required":"Password is required",
+        "Remember_me":"Remember me",
+        "Forgot_password":"Forgot password?",
+        "login_submit":"Login",
+        "login_forgot_password":"<PASSWORD>"
+      
+     
+    },
+    "error_msgs":{
+        "login_error":"Wrong email or password"
+    }
 }

@@ -10,19 +10,26 @@
     [opened]="!isScreenSmall">
     <!-- Navigation header hook -->
     <ng-container fuseVerticalNavigationContentHeader>
+        <div class="w-full flex justify-end py-4">
+            <button
+            mat-icon-button
+            (click)="toggleNavigation('mainNavigation')">
+            <mat-icon [svgIcon]="'heroicons_outline:bars-3'"></mat-icon>
+        </button>
+        </div>
         <!-- Logo -->
-        <div class="flex items-center h-20 p-6 pb-0">
-            <!-- Light version -->
+        <!-- <div class="flex items-center h-20 p-6 pb-0">
+           
             <img
                 class="dark:hidden w-30"
                 src="assets/images/logo/logo-text.svg"
                 alt="Logo image">
-            <!-- Dark version -->
+            
             <img
                 class="hidden dark:flex w-30"
                 src="assets/images/logo/logo-text-on-dark.svg"
                 alt="Logo image">
-        </div>
+        </div> -->
     </ng-container>
 </fuse-vertical-navigation>
 

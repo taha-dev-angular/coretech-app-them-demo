@@ -3,11 +3,66 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 
 export const defaultNavigation: FuseNavigationItem[] = [
     {
-        id   : 'example',
-        title: 'committee',
+        id   : 'example22',
+        title: 'example',
         type : 'basic',
         icon : 'mat_outline:cloud',
         link : '/example'
+    },
+    
+    {
+        id   : 'Nationalities',
+        title: 'Nationalities',
+        type : 'basic',
+        icon : 'mat_outline:cloud',
+        link : '/Nationalities'
+    },
+    {
+        id   : 'Students',
+        title: 'Students',
+        type : 'basic',
+        icon : 'mat_outline:cloud',
+        link : '/Students'
+    },
+    // Nationalities
+    {
+        id      : 'dashboards',
+        title   : 'Meettings',
+        // subtitle: 'Unique dashboard designs',
+        type    : 'collapsable',
+        icon    : 'heroicons_outline:home',
+        children: [
+            {
+                id   : 'New_Meetings',
+                title: 'New Meetings',
+                type : 'basic',
+                icon : 'heroicons_outline:clipboard-document-check',
+                link : '/dashboards/project',
+            },
+            {
+                id   : 'Memebers',
+                title: 'Memebers',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/dashboards/analytics',
+            },
+            {
+                id   : 'Memebers5',
+                title: 'Memebers',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/dashboards/analytics',
+            },
+            {
+                id   : 'Memebers4',
+                title: 'Memebers',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/dashboards/analytics',
+            },
+           
+           
+        ],
     },
     {
         id      : 'dashboards',
@@ -17,26 +72,34 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon    : 'heroicons_outline:home',
         children: [
             {
-                id   : 'dashboards.project',
+                id   : 'New_Meetings',
                 title: 'New Meetings',
                 type : 'basic',
                 icon : 'heroicons_outline:clipboard-document-check',
                 link : '/dashboards/project',
             },
             {
-                id   : 'dashboards.analytics',
+                id   : 'Memebers',
                 title: 'Memebers',
                 type : 'basic',
                 icon : 'heroicons_outline:chart-pie',
                 link : '/dashboards/analytics',
             },
             {
-                id   : 'dashboards.finance',
-                title: 'Invated',
+                id   : 'Memebers5',
+                title: 'Memebers',
                 type : 'basic',
-                icon : 'heroicons_outline:banknotes',
-                link : '/dashboards/finance',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/dashboards/analytics',
             },
+            {
+                id   : 'Memebers4',
+                title: 'Memebers',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/dashboards/analytics',
+            },
+           
            
         ],
     },
@@ -45,21 +108,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         title: 'Tasks',
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    },
-    {
-        id   : 'example',
-        title: 'archave',
-        type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
+        link : '/example444'
     },
    
-    {
-        id  : 'divider-1',
-        type: 'divider',
-    },
+   
+   
 ];
+
 export const compactNavigation: FuseNavigationItem[] = [
     {
         id      : 'dashboards',
