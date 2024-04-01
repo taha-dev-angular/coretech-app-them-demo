@@ -37,6 +37,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     styleUrl: './profile-page.component.scss',
 })
 export class ProfilePageComponent implements OnInit {
+
+    imageSrc: string = null;
+    ImageFile: File = null;
     private readonly _formBuilder = inject(UntypedFormBuilder);
     public readonly destroyRef = inject(DestroyRef);
     gender = [
@@ -64,8 +67,44 @@ export class ProfilePageComponent implements OnInit {
             Email_address: [],
             postion: ['', Validators.required],
             PersonalPhoto: [],
-            DOB: [],
+            dop: [],
             Gender: [],
+            WorkPhone:[],
+            mobile_phone:[]
+
         });
+    }
+
+  
+
+    removeAvatar(): void {
+        this.imageSrc = null;
+        this.ImageFile = null;
+    }
+
+    uploadAvatar(fileList: FileList): void {
+        // Return if canceled
+        if (!fileList.length) {
+            return;
+        }
+
+        // const allowedTypes = ['image/jpeg', 'image/png'];
+        const file = fileList[0];
+
+        // Return if the file is not allowed
+        // if (!allowedTypes.includes(file.type)) {
+        //     return;
+        // }
+
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+            this.imageSrc = reader.result as string;
+        };
+        this.ImageFile = file;
+    }
+
+    submit_profile(){
+
     }
 }

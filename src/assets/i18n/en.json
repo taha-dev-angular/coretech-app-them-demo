@@ -16,6 +16,10 @@
       
      
     },
+    "common":{
+        "save":"save",
+        "cancle":"cancel"
+    },
     "error_msgs":{
         "login_error":"Wrong email or password"
     },
