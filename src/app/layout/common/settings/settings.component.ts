@@ -26,6 +26,9 @@ import { Subject, takeUntil } from 'rxjs';
                 empty-layout + settings .settings-cog {
                     right: 0 !important;
                 }
+                classic-layout + settings .settings-cog {
+                    right: 0 !important;
+                }
             }
         `,
     ],

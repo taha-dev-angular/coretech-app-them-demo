@@ -18,5 +18,55 @@
     },
     "error_msgs":{
         "login_error":"Wrong email or password"
+    },
+    "Navigation_labels":{
+        "My_committee":"My committee",
+        "my_profile":"my profile",
+        "my_tasks":"My Tasks",
+        "tasks":"tasks",
+        "My_meetings":"My meetings",
+        "Archived_meetings":"Archived meetings",
+        "The_existing_meeting":"The existing meeting",
+        "Meeting_data":"Meeting data",
+        "schedule_of_work":"schedule of work",
+        "Guest_suggestion":"Guest suggestion",
+        "Apologies_for_not_attending":"Apologies for not attending",
+        "Determine_the_method_of_attendance":"Determine the method of attendance",
+        "Participation_in_meeting":"Participation in a meeting",
+        "Managing_the_ongoing_meeting":"Managing the ongoing meeting",
+        "Attendance_data":"Attendance data",
+        "Building_the_agenda":"Building the agenda",
+        "Schedule_a_meeting":"Schedule a meeting",
+        "Managing_the_meeting_participants":"Managing the meeting and participants",
+        "Chaired_the_current_meeting":"Chaired the current meeting",
+        "Decisions":"Decisions",
+        "Absence_request":"Absence request",
+        "System_administration":"System administration",
+        "Planned_tasks":"Planned tasks",
+        "System_indexes":"System indexes",
+        "Individuals":"Individuals",
+        "Committees":"Committees",
+        "Unarchive_meeting":"Unarchive a meeting",
+        "Users_permissions":"Users and permissions"
+      
+    },
+    "profile_page":{
+        "Profile_Information":"Profile Information",
+        "information_hint-title":"please Enter your information below",
+        "first_name":"First Name",
+        "required_field":"required field",
+        "last_name":"Last Name",
+        "MiddleName":"Middle Name",
+        "email_address":"Email Address",
+        "address":"Address",
+        "position":"Position",
+        "work_phone":"Work Phone",
+        "gender":"Gender",
+        "brithday":"Birthday",
+        "username":"Username",
+        "mobile_phone":"Mobile Phone",
+        "photo_profile":"Photo Profile"
+        
+        
     }
 }

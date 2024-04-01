@@ -10,13 +10,14 @@
     [opened]="!isScreenSmall">
     <!-- Navigation header hook -->
     <ng-container fuseVerticalNavigationContentHeader>
-        <div class="w-full flex justify-end py-4">
+        <!-- <div class="w-full flex justify-end py-4">
             <button
             mat-icon-button
             (click)="toggleNavigation('mainNavigation')">
             <mat-icon [svgIcon]="'heroicons_outline:bars-3'"></mat-icon>
         </button>
-        </div>
+        </div> -->
+        <div class="h-20 w-full"></div>
         <!-- Logo -->
         <!-- <div class="flex items-center h-20 p-6 pb-0">
            
@@ -52,12 +53,12 @@
             <shortcuts></shortcuts>
             <messages></messages>
             <notifications></notifications>
-            <button
+            <!-- <button
                 class="lg:hidden"
                 mat-icon-button
                 (click)="quickChat.toggle()">
                 <mat-icon [svgIcon]="'heroicons_outline:chat-bubble-left-right'"></mat-icon>
-            </button>
+            </button> -->
             <user></user>
         </div>
     </div>
@@ -77,4 +78,4 @@
 </div>
 
 <!-- Quick chat -->
-<quick-chat #quickChat="quickChat"></quick-chat>
+<!-- <quick-chat #quickChat="quickChat"></quick-chat> -->

@@ -1,5 +1,6 @@
+import { TranslocoModule } from '@ngneat/transloco';
 import { BooleanInput } from '@angular/cdk/coercion';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -13,6 +14,7 @@ import { FuseVerticalNavigationGroupItemComponent } from '@fuse/components/navig
 import { FuseVerticalNavigationSpacerItemComponent } from '@fuse/components/navigation/vertical/components/spacer/spacer.component';
 import { FuseVerticalNavigationComponent } from '@fuse/components/navigation/vertical/vertical.component';
 import { filter, Subject, takeUntil } from 'rxjs';
+import { upperCase } from 'lodash';
 
 @Component({
     selector       : 'fuse-vertical-navigation-collapsable-item',
@@ -20,7 +22,7 @@ import { filter, Subject, takeUntil } from 'rxjs';
     animations     : fuseAnimations,
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone     : true,
-    imports        : [NgClass, MatTooltipModule, NgIf, MatIconModule, NgFor, FuseVerticalNavigationBasicItemComponent, forwardRef(() => FuseVerticalNavigationCollapsableItemComponent), FuseVerticalNavigationDividerItemComponent, FuseVerticalNavigationGroupItemComponent, FuseVerticalNavigationSpacerItemComponent],
+    imports        : [NgClass, MatTooltipModule, NgIf, MatIconModule, NgFor, FuseVerticalNavigationBasicItemComponent, forwardRef(() => FuseVerticalNavigationCollapsableItemComponent), FuseVerticalNavigationDividerItemComponent, FuseVerticalNavigationGroupItemComponent, FuseVerticalNavigationSpacerItemComponent , TranslocoModule, TitleCasePipe],
 })
 export class FuseVerticalNavigationCollapsableItemComponent implements OnInit, OnDestroy
 {

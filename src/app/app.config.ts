@@ -14,6 +14,7 @@ import { mockApiServices } from 'app/mock-api';
 import { TranslocoHttpLoader } from './core/transloco/transloco.http-loader';
 import { PermissionsService } from './shared/services/permissions.service';
 import { NgxPermissionsModule, NgxPermissionsService, NgxRolesService } from 'ngx-permissions';
+import { availableLanguages } from './core/transloco/available-languages';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -47,16 +48,7 @@ export const appConfig: ApplicationConfig = {
         // Transloco Config
         provideTransloco({
             config: {
-                availableLangs      : [
-                    {
-                        id   : 'en',
-                        label: 'English',
-                    },
-                    {
-                        id   : 'tr',
-                        label: 'Turkish',
-                    },
-                ],
+                availableLangs      :availableLanguages,
                 defaultLang         : 'en',
                 fallbackLang        : 'en',
                 reRenderOnLangChange: true,
