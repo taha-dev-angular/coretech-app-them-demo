@@ -74,9 +74,9 @@ export const appRoutes: Route[] = [
         //     layout: 'compact'
         // },
         component: LayoutComponent,
-        resolve: {
-            initialData: initialDataResolver
-        },
+        // resolve: {
+        //     initialData: initialDataResolver
+        // },
         children: [
             { path: 'example', loadChildren: () => import('app/modules/admin/example/example.routes') },
             {

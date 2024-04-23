@@ -131,13 +131,8 @@ export class LayoutComponent implements OnInit, OnDestroy
         this._unsubscribeAll.complete();
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Private methods
-    // -----------------------------------------------------------------------------------------------------
+   
 
-    /**
-     * Update the selected layout
-     */
     private _updateLayout(): void
     {
         // Get the current activated route
@@ -190,11 +185,7 @@ export class LayoutComponent implements OnInit, OnDestroy
         });
     }
 
-    /**
-     * Update the selected scheme
-     *
-     * @private
-     */
+   
     private _updateScheme(): void
     {
         // Remove class names for all schemes
@@ -204,11 +195,7 @@ export class LayoutComponent implements OnInit, OnDestroy
         this._document.body.classList.add(this.scheme);
     }
 
-    /**
-     * Update the selected theme
-     *
-     * @private
-     */
+    
     private _updateTheme(): void
     {
         // Find the class name for the previously selected theme and remove it
